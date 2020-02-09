@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectXOverlay", "DirectXOverlay\DirectXOverlay.csproj", "{049F8FB0-5ABF-4227-89F9-04183BE48A99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectXOverlay.ConsoleApp", "DirectXOverlay.ConsoleApp\DirectXOverlay.ConsoleApp.csproj", "{332D0D21-AF2B-4053-A347-D3C85DD582AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{049F8FB0-5ABF-4227-89F9-04183BE48A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{049F8FB0-5ABF-4227-89F9-04183BE48A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{049F8FB0-5ABF-4227-89F9-04183BE48A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{049F8FB0-5ABF-4227-89F9-04183BE48A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332D0D21-AF2B-4053-A347-D3C85DD582AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332D0D21-AF2B-4053-A347-D3C85DD582AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332D0D21-AF2B-4053-A347-D3C85DD582AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332D0D21-AF2B-4053-A347-D3C85DD582AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A37AD5C-60E1-4CAF-8802-AA3B176D74E7}
+	EndGlobalSection
+EndGlobal
