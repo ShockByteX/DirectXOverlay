@@ -14,6 +14,7 @@ namespace DirectXOverlay.DirectX
         {
             _tf = new TextFormat(Factory, name, (FontWeight)weight, (FontStyle)style, size);
         }
+
         ~Dx2DFont() => Dispose();
 
         public string FamilyName => _tf.FontFamilyName;

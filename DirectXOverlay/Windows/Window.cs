@@ -96,15 +96,15 @@ namespace DirectXOverlay.Windows
             if (_disposed) return;
             _disposed = true;
 
-            if (_visible) Visible = false;
+            var windowHandle = _windowHandle;
+            _windowHandle = IntPtr.Zero;
 
-            User32.DestroyWindow(_windowHandle);
+            User32.SendMessage(windowHandle, WindowsMessage.WM_DESTROY, IntPtr.Zero, IntPtr.Zero);
+            User32.DestroyWindow(windowHandle);
             User32.UnregisterClass(_regResult, IntPtr.Zero);
 
-            _windowHandle = IntPtr.Zero;
-            _parentWindowHandle = IntPtr.Zero;
-
             ThreadHelper.SafeJoin(_stickThread, _windowThread);
+
             GC.SuppressFinalize(this);
         }
 
@@ -169,10 +169,7 @@ namespace DirectXOverlay.Windows
                 User32.GetWindowRect(_parentWindowHandle, out var rect);
                 SetBounds(rect.Left, rect.Top, rect.Right - rect.Left, rect.Bottom - rect.Top);
 
-                var isInFront = User32.GetForegroundWindow() == _parentWindowHandle;
-
-                if (isInFront && !Visible) Visible = true;
-                if (!isInFront && Visible) Visible = false;
+                Visible = User32.GetForegroundWindow() == _parentWindowHandle;
 
                 Thread.Sleep(33);
             }

@@ -65,12 +65,12 @@ namespace DirectXOverlay.Windows
             _renderer.Dispose();
 
             base.Dispose();
+
+            GC.SuppressFinalize(this);
         }
 
         private void DrawThreadFunc()
         {
-            _active = true;
-
             var frames = 0;
             var fpsWatch = Stopwatch.StartNew();
 
@@ -89,6 +89,8 @@ namespace DirectXOverlay.Windows
 
                 frames++;
             }
+
+            _active = true;
 
             while (_active)
             {
